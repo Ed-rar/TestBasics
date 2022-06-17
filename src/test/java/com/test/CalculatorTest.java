@@ -9,13 +9,23 @@ public class CalculatorTest {
     private Calculator calculator = new Calculator();
 
     @Test
-    public void addition() {
+    public void additionSucess() {
         assertEquals(30, calculator.addition(10,20),0);
     }
 
     @Test
-    public void subtraction() {
+    public void additionFailed() {
+        assertNotEquals(45, calculator.addition(10,20),0);
+    }
+
+    @Test
+    public void subtractionSuccess() {
         assertEquals(30, calculator.subtraction(50,20),0);
+    }
+
+    @Test
+    public void subtractionFailed() {
+        assertNotEquals(45, calculator.subtraction(50,20),0);
     }
 
     @Test
@@ -28,8 +38,13 @@ public class CalculatorTest {
         assertNotEquals(45, calculator.multiplication(6,5), 0);
     }
     @Test
-    public void division() {
-        assertEquals(30,calculator.division(150,5),0);
+    public void divisionSuccess() {
+        assertEquals(30, calculator.division(150,5),0);
+    }
+
+    @Test
+    public void divisionFailed() {
+        assertNotEquals(45, calculator.division(150,5),0);
     }
 
     @Test
